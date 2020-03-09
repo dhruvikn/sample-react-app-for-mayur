@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './Home'
+import FormComponent from './FormComponent';
 
 class App extends React.Component {
   constructor() {
@@ -12,7 +13,12 @@ class App extends React.Component {
     }
   }
 
-  // Todo Input elements
+  // HTML to jsx Converter
+  // https://magic.reactjs.net/htmltojsx.htm
+
+  // UI Frameworks - Alternative to bootstrap
+  // semantic-ui.com
+  // bulma.io
 
   changeMessage = (name) => {
     this.setState(prevState => {
@@ -27,9 +33,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
 
-          <button onClick={e => this.changeMessage("dhruvik")}>Click me</button>
+        <header className="App-header">
+          <button onClick={e => this.changeMessage("dhruvik")} className="btn btn-primary mb-3">Click me</button>
 
           {
             this.state.message == 'Hello Mayur' ?
@@ -40,6 +47,7 @@ class App extends React.Component {
               ''
           }
 
+          <FormComponent />
         </header>
       </div>
     );

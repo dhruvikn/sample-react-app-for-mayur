@@ -53,13 +53,19 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                {
-                    this.state.isLoading ?
-                        "Please wait... loading data"
-                        :
-                        JSON.stringify(this.state.data)
-                }
+            <div className="container">
+                <div style={{
+                    maxHeight: "200px",
+                    overflow: "scroll"
+                }}
+                className="mb-5">
+                    {
+                        this.state.isLoading ?
+                            "Please wait... loading data"
+                            :
+                            JSON.stringify(this.state.data)
+                    }
+                </div>
             </div>
         );
     }
