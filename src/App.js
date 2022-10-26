@@ -36,7 +36,7 @@ class App extends React.Component {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
 
         <header className="App-header">
-          <button onClick={e => this.changeMessage("dhruvik")} className="btn btn-primary mb-3">Click me</button>
+          <button onClick={e => this.changeMessage("mayur")} className="btn btn-primary mb-3">Click me</button>
 
           {
             this.state.message == 'Hello Mayur' ?
